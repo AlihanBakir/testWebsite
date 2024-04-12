@@ -52,14 +52,84 @@
 						<!-- Posts -->
 					<section>
 						<article>
-							<header id="header2" onclick="toggleDetails()">
+							<header id="education" onclick="toggleDetails(event)">
 								<h2><a>Education</a></h2>
 							</header>
-							<div id="onClick_details">
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-								<ul class="actions special">
-									<li><a href="#" class="button">Full Story</a></li>
-								</ul>
+							<div class="onClick_details">
+								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+									Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+							</div>
+						</article>
+						<article>
+							<header id="publications" onclick="toggleDetails(event)">
+								<h2><a>Publications</a></h2>
+							</header>
+							<div class="onClick_details">
+								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+									Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+							</div>
+						</article>
+						<article>
+							<header id="projects" onclick="toggleDetails(event)">
+								<h2><a>Projects</a></h2>
+							</header>
+							<div class="onClick_details">
+								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+									Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+							</div>
+						</article>
+						<article>
+							<header id="experience" onclick="toggleDetails(event)">
+								<h2><a>Experience</a></h2>
+							</header>
+							<div class="onClick_details">
+								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+									Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+							</div>
+						</article>
+						<article>
+							<header id="awards" onclick="toggleDetails(event)">
+								<h2><a>Awards & Honors</a></h2>
+							</header>
+							<div class="onClick_details">
+								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+									Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+							</div>
+						</article>
+						<article>
+							<header id="language" onclick="toggleDetails(event)">
+								<h2><a>Language</a></h2>
+							</header>
+							<div class="onClick_details">
+								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+									Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+							</div>
+						</article>
+						<article>
+							<header id="skills" onclick="toggleDetails(event)">
+								<h2><a>Skills</a></h2>
+							</header>
+							<div class="onClick_details">
+								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+									Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+							</div>
+						</article>
+						<article>
+							<header id="affiliations" onclick="toggleDetails(event)">
+								<h2><a>Affiliations</a></h2>
+							</header>
+							<div class="onClick_details">
+								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+									Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+							</div>
+						</article>
+						<article>
+							<header id="activities" onclick="toggleDetails(event)">
+								<h2><a>Activities</a></h2>
+							</header>
+							<div class="onClick_details">
+								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+									Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
 							</div>
 						</article>
 					</section>
@@ -151,19 +221,19 @@
 			<script src="assets/js/main.js"></script>
 
 			<script>
-				function toggleDetails() {
-					var details = document.getElementById("onClick_details");
-					if (details.style.maxHeight === "0px") {
-						details.style.maxHeight = "1000px";  // Adjust this value as needed
-						details.style.opacity = "1";
-					} else {
+				function toggleDetails(event) {
+					var details = event.currentTarget.nextElementSibling;
+					if (details.style.maxHeight && details.style.maxHeight !== "0px") {
 						details.style.maxHeight = "0px";
 						details.style.opacity = "0";
+					} else {
+						details.style.maxHeight = "1000px";
+						details.style.opacity = "1";
 					}
 				}
-			</script>
+				</script>
 			<style>
-				#onClick_details {
+				.onClick_details {
 					max-height: 0;
 					opacity: 0;
 					overflow: hidden;
